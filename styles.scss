@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --primary-font: "Roboto", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
