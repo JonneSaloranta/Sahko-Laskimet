@@ -5,17 +5,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="This is a website about me">
+    <meta name="description" content="Tämä sivu sisältää erilaisia sähkö laskureita, kaavoja jne">
     <meta name="keywords" content="Sähkö, Laskurit, Kaavat">
     <meta name="author" content="Jonne Saloranta">
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="styles.css">
-    <title>Laskimet</title>
+    <title>Sähkö laskimet ja kaavat</title>
 </head>
 
 <body>
-    <h1>Hello World!</h1>
 
+    <div class="menu">
+        <h1>Linkit</h1>
+        <a href="#ylös" id="alku">Alkuun</a>
+        <a href="#suureet">Suureet</a>
+        <a href="#ohmin-laki">Ohmin laki</a>
+        <a href="#jännite-virta-resistanssi">Jännite, virta ja resistanssi</a>
+        <a href="#sähkön-kulutus">Sähkön kulutus</a>
+        <a href="#kulutetun-sähkön-hinta">Sähkön hinta</a>
+    </div>
+    <div class="container">
+        <h1 class="title center" id="ylös">Kaavoja</h1>
+        <div class="box" id="suureet">
+            <h2>Suureet</h2>
+            <table>
+                <tr>
+                    <th>Suure</th>
+                    <th>Yksikkö</th>
+                    <th>Esimerkki</th>
+                </tr>
+                <tr>
+                    <td>Jännite</td>
+                    <td>V</td>
+                    <td>230V</td>
+                </tr>
+                <tr>
+                    <td>Virta</td>
+                    <td>A</td>
+                    <td>10A</td>
+                </tr>
+                <tr>
+                    <td>Resistanssi</td>
+                    <td>Ω</td>
+                    <td>100Ω</td>
+                </tr>
+                <tr>
+                    <td>Teho</td>
+                    <td>W</td>
+                    <td>2000W</td>
+                </tr>
+                <tr>
+                    <td>Sähkön kulutus</td>
+                    <td>Wh</td>
+                    <td>2300Wh</td>
+                </tr>
+                <tr>
+                    <td>Sähkön hinta</td>
+                    <td>€</td>
+                    <td>0.575€</td>
+                </tr>
+                <tr>
+                    <td>Sähkön hinta kWh:ta kohden</td>
+                    <td>€/kWh</td>
+                    <td>0.25€/kWh</td>
+                </tr>
+                <tr>
+                    <td>Aika</td>
+                    <td>h</td>
+                    <td>1h</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="box" id="ohmin-laki">
+            <h2>Ohmin laki</h2>
+            <p>Ohmin laki kertoo, että jännite on suoraan verrannollinen resistanssin kanssa ja vastakkaisesti verrannollinen virran kanssa.</p>
+            <p>Ohmin laki on esitetty kaavalla:</p>
+            <p><span class="highlight">U=R*I</span></p>
+            <p>Missä U on jännite, R on resistanssi ja I on virta.</p>
+
+            <div class="sources">
+                <p>Lisää tietoa:</p>
+                <a href="https://fi.wikipedia.org/wiki/Ohmin_laki">Ohmin laki</a>
+            </div>
+        </div>
+        <div class="box" id="jännite-virta-resistanssi">
+            <h2>Kuinka laskea jännite, virta tai resistanssi?</h2>
+            <p>Voit laskea jännitteen, virran tai resistanssin kaavalla:</p>
+            <p>Jännite = Virta * Resistanssi</p>
+            <p>Virta = Jännite / Resistanssi</p>
+            <p>Resistanssi = Jännite / Virta</p>
+            <p>Hyvä muistisääntö tähän on PUIMURI</p>
+            <p><span class="highlight">P=U*I</span>M<span class="highlight">U=R*I</span></p>
+        </div>
+
+        <div class="box" id="sähkön-kulutus">
+            <h2>Sähkön kulutuksen laskeminen</h2>
+            <p>Voit laskea sähkön kulutuksen kaavalla:</p>
+            <p><span class="highlight">Kulutus = Jännite * Virta * Aika</span></p>
+            <p>Missä kulutus on sähkön kulutus, jännite on sähkön jännite, virta on sähkön virta ja aika on kuinka kauan sähköä on kulutettu.</p>
+            <p>Esimerkiksi jos sähkön jännite on 230V, virta on 10A ja aika on 1h, niin sähkön kulutus on:</p>
+            <p><span class="highlight">Kulutus = 230V * 10A * 1h</span></p>
+            <p><span class="highlight">Kulutus = 2300Wh</span></p>
+            <p>2300Wh on sama asia kuin 2.3kWh</p>
+        </div>
+
+        <div class="box" id="kulutetun-sähkön-hinta">
+            <h2>Kulutetun sähkön hinnan laskeminen</h2>
+            <p>Voit laskea sähkön kulutuksen kaavalla:</p>
+            <p><span class="highlight">Hinta = Kulutus * Hinta / kWh</span></p>
+            <p>Missä hinta on sähkön kulutuksen hinta, kulutus on sähkön kulutus, hinta on sähkön hinta kWh:ta kohden.</p>
+            <p>Esimerkiksi jos sähkön kulutus on 2.3kWh ja sähkön hinta on 0.25€/kWh, niin sähkön kulutuksen hinta on:</p>
+            <p><span class="highlight">Hinta = 2.3kWh * 0.25€/kWh</span></p>
+            <p><span class="highlight">Hinta = 0.575€</span></p>
+        </div>
+    </div>
+
+    <footer id="ota-yhteyttä">
+        <p>&copy;2022 Jonne Saloranta</p>
+        <div class="github">
+            <p>Voit ottaa yhteyttä GitHubissa.</p>
+            <a href="https://github.com/JonneSaloranta/Sahko-Laskimet">GitHub</a>
+        </div>
+    </footer>
 </body>
 
 </html>
